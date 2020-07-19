@@ -1,13 +1,13 @@
 #pragma once
 #include "gameNode.h"
-class enemy : public gameNode
+class stage1 : public gameNode
 {
 private:
 
 
 public:
-	enemy() {}
-	~enemy() {}
+	stage1() {}
+	~stage1() {}
 public:
 	virtual HRESULT init();
 	virtual void render();
