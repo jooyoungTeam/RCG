@@ -148,22 +148,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
+    <ClInclude Include="boss.h" />
     <ClInclude Include="button.h" />
+    <ClInclude Include="cameraManager.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="effect.h" />
     <ClInclude Include="effectManager.h" />
     <ClInclude Include="enemy.h" />
+    <ClInclude Include="enemyManager.h" />
     <ClInclude Include="gameNode.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="imageManager.h" />
     <ClInclude Include="inGameScene.h" />
     <ClInclude Include="iniDataManager.h" />
     <ClInclude Include="item.h" />
+    <ClInclude Include="itemManager.h" />
     <ClInclude Include="keyAniManager.h" />
     <ClInclude Include="keyManager.h" />
     <ClInclude Include="loadingScene.h" />
     <ClInclude Include="object.h" />
+    <ClInclude Include="objectManager.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="playGround.h" />
     <ClInclude Include="progressBar.h" />
@@ -175,6 +180,7 @@
     <ClInclude Include="stage1.h" />
     <ClInclude Include="stage2.h" />
     <ClInclude Include="stageBoss.h" />
+    <ClInclude Include="stageManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="timeManager.h" />
@@ -186,21 +192,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
+    <ClCompile Include="boss.cpp" />
     <ClCompile Include="button.cpp" />
+    <ClCompile Include="cameraManager.cpp" />
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="effectManager.cpp" />
     <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemyManager.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="imageManager.cpp" />
     <ClCompile Include="inGameScene.cpp" />
     <ClCompile Include="iniDataManager.cpp" />
     <ClCompile Include="item.cpp" />
+    <ClCompile Include="itemManager.cpp" />
     <ClCompile Include="keyAniManager.cpp" />
     <ClCompile Include="keyManager.cpp" />
     <ClCompile Include="loadingScene.cpp" />
     <ClCompile Include="object.cpp" />
+    <ClCompile Include="objectManager.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="playGround.cpp" />
     <ClCompile Include="progressBar.cpp" />
@@ -209,6 +220,7 @@
     <ClCompile Include="stage1.cpp" />
     <ClCompile Include="stage2.cpp" />
     <ClCompile Include="stageBoss.cpp" />
+    <ClCompile Include="stageManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

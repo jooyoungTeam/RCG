@@ -1,10 +1,13 @@
 #pragma once
 #include "gameNode.h"
+#include "stageManager.h"
 //#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
 
 class playGround : public gameNode
 {
 private:
+	stageManager* _stageManager;
+
 public:
 	playGround();
 	~playGround();

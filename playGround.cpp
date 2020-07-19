@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "playGround.h"
 
-
 playGround::playGround()
 {
 	
@@ -16,7 +15,8 @@ playGround::~playGround()
 HRESULT playGround::init()
 {
 	gameNode::init(true);
-	
+
+	_stageManager->init();
 
 	return S_OK;
 }
@@ -24,7 +24,7 @@ HRESULT playGround::init()
 //메모리 해제
 void playGround::release()
 {
-	
+	_stageManager->release();
 }
 
 //연산
@@ -32,7 +32,7 @@ void playGround::update()
 {
 	gameNode::update();
 
-
+	_stageManager->update();
 }
 
 //그리기 전용
@@ -43,13 +43,7 @@ void playGround::render()
 
 
 
-
-
-
-
-
-
-
+	_stageManager->render();
 
 	
 	TIMEMANAGER->render(getMemDC());

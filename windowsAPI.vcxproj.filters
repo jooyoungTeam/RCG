@@ -180,6 +180,24 @@
     <ClInclude Include="stageBoss.h">
       <Filter>playGround\stage</Filter>
     </ClInclude>
+    <ClInclude Include="cameraManager.h">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="boss.h">
+      <Filter>playGround\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="itemManager.h">
+      <Filter>playGround\item</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyManager.h">
+      <Filter>playGround\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="objectManager.h">
+      <Filter>playGround\object</Filter>
+    </ClInclude>
+    <ClInclude Include="stageManager.h">
+      <Filter>playGround\stage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -273,6 +291,24 @@
       <Filter>playGround\stage</Filter>
     </ClCompile>
     <ClCompile Include="stageBoss.cpp">
+      <Filter>playGround\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraManager.cpp">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="boss.cpp">
+      <Filter>playGround\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="itemManager.cpp">
+      <Filter>playGround\item</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyManager.cpp">
+      <Filter>playGround\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="objectManager.cpp">
+      <Filter>playGround\object</Filter>
+    </ClCompile>
+    <ClCompile Include="stageManager.cpp">
       <Filter>playGround\stage</Filter>
     </ClCompile>
   </ItemGroup>
