@@ -16,6 +16,7 @@ HRESULT playGround::init()
 {
 	gameNode::init(true);
 
+	_stageManager = new stageManager;
 	_stageManager->init();
 
 	return S_OK;

@@ -100,7 +100,7 @@ public:
 	//이미지 프레임 렌더(뿌려질DC, 그려질 좌표(left), 그려질 좌표(top), 현재 프레임 가로번호, 현재 프레임 세로번호)
 	void frameRender(HDC hdc, int destX, int destY, int currentFrameX, int currentFrameY);
 
-	void loopRender(HDC hdc, const LPRECT drawArea, int offSetX, int offSetY);
+	void loopRender(HDC hdc, const RECT drawArea, int offSetX, int offSetY);
 
 	//알파렌더 (뿌려질DC, 알파값(0 ~ 255))
 	void alphaRender(HDC hdc, BYTE alpha);

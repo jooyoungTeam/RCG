@@ -397,7 +397,7 @@ void image::frameRender(HDC hdc, int destX, int destY, int currentFrameX, int cu
 	}
 }
 
-void image::loopRender(HDC hdc, const LPRECT drawArea, int offSetX, int offSetY)
+void image::loopRender(HDC hdc, const RECT drawArea, int offSetX, int offSetY)
 {
 	//정밀한 예외처리를 할땐 나머지 연산자를 꼭 이용합시다
 	if (offSetX < 0) offSetX = _imageInfo->width + (offSetX % _imageInfo->width);
@@ -409,10 +409,10 @@ void image::loopRender(HDC hdc, const LPRECT drawArea, int offSetX, int offSetY)
 	RECT rcDest;
 	RECT rcSour;
 
-	int drawAreaX = drawArea->left;					//그려질 영역 left
-	int drawAreaY = drawArea->top;					//그려질 영역 top
-	int drawAreaW = drawArea->right - drawAreaX;	//그려질 영역 width
-	int drawAreaH = drawArea->bottom - drawAreaY;	//그려질 영역 height
+	int drawAreaX = drawArea.left;					//그려질 영역 left
+	int drawAreaY = drawArea.top;					//그려질 영역 top
+	int drawAreaW = drawArea.right - drawAreaX;	    //그려질 영역 width
+	int drawAreaH = drawArea.bottom - drawAreaY;	//그려질 영역 height
 
 	//세로부터
 	for (int y = 0; y < drawAreaH; y += sourHeight)
