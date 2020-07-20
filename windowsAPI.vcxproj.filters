@@ -204,6 +204,9 @@
     <ClInclude Include="testPlayerScene.h">
       <Filter>playGround\stage</Filter>
     </ClInclude>
+    <ClInclude Include="eventManager.h">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -322,6 +325,9 @@
     </ClCompile>
     <ClCompile Include="testPlayerScene.cpp">
       <Filter>playGround\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="eventManager.cpp">
+      <Filter>2DGameFramework\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
