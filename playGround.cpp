@@ -19,6 +19,8 @@ HRESULT playGround::init()
 	_stageManager = new stageManager;
 	_stageManager->init();
 
+	CAMERAMANAGER->settingCamera(0, 0, WINSIZEX, WINSIZEY, 0, 0, 2016 - WINSIZEX, 672 - WINSIZEY);
+
 	return S_OK;
 }
 
