@@ -39,7 +39,7 @@ void idleState::update(player & player)
 
 		else if (KEYMANAGER->isStayKeyDown(VK_DOWN))
 		{
-			if (WINSIZEY > player.getShadowY() - 100)
+			if (WINSIZEY > player.getY() - 100)
 			{
 				if (!player.getDirection())
 				{
@@ -85,32 +85,33 @@ void moveState::update(player & player)
 	{
 		if (KEYMANAGER->isStayKeyDown(VK_LEFT))
 		{
-			player.setShadowX(player.getShadowX() - 3);
+			player.setX(player.getX() - 3);
 			player.setDirection(false);
 			if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
 			{
-				player.setIsMove(false);
+				//player.setY(player.getY() - 5);
 				player.setAni(KEYANIMANAGER->findAnimation("P_LEFT_IDLE"), IMAGEMANAGER->findImage("PLAYER_IDLE"));
+				player.setState(player.getIdleState());
 				player.setDirection(false);
 			}
 		}
-		cout << player.getIsMove() << endl;
+
 		if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
 		{
-			player.setShadowX(player.getShadowX() + 3);
+			player.setX(player.getX() + 3);
 			player.setDirection(true);
 			if (KEYMANAGER->isStayKeyDown(VK_LEFT))
 			{
-				player.setIsMove(false);
+				//player.setY(player.getY() - 5);
 				player.setAni(KEYANIMANAGER->findAnimation("P_RIGHT_IDLE"), IMAGEMANAGER->findImage("PLAYER_IDLE"));
+				player.setState(player.getIdleState());
 				player.setDirection(true);
-
 			}
 		}
 
 		if (KEYMANAGER->isOnceKeyUp(VK_LEFT) && KEYMANAGER->getKeyUp() == NULL)
 		{
-			//cout << " 왼쪽 아이들로 돌아감 " << endl;
+			cout << " 왼쪽 아이들로 돌아감 " << endl;
 			//player.setY(player.getY() - 5);
 			player.setAni(KEYANIMANAGER->findAnimation("P_LEFT_IDLE"), IMAGEMANAGER->findImage("PLAYER_IDLE"));
 			player.setState(player.getIdleState());
@@ -118,7 +119,7 @@ void moveState::update(player & player)
 		}
 		if (KEYMANAGER->isOnceKeyUp(VK_RIGHT) && KEYMANAGER->getKeyUp() == NULL)
 		{
-			//cout << " 오른쪽 아이들로 돌아감 " << endl;
+			cout << " 오른쪽 아이들로 돌아감 " << endl;
 			//player.setY(player.getY() - 5);
 			player.setAni(KEYANIMANAGER->findAnimation("P_RIGHT_IDLE"), IMAGEMANAGER->findImage("PLAYER_IDLE"));
 			player.setState(player.getIdleState());
@@ -126,11 +127,11 @@ void moveState::update(player & player)
 		}
 		if (KEYMANAGER->isStayKeyDown(VK_UP))
 		{
-			player.setShadowY(player.getShadowY() - 3);
+			player.setY(player.getY() - 3);
 		}
 		if (KEYMANAGER->isStayKeyDown(VK_DOWN))
 		{
-			player.setShadowY(player.getShadowY() + 3);
+			player.setY(player.getY() + 3);
 		}
 		if (KEYMANAGER->isOnceKeyUp(VK_UP) && KEYMANAGER->getKeyUp() == NULL)
 		{
@@ -193,13 +194,16 @@ void jumpState::update(player & player)
 {
 	if (player.getIsJumping())
 	{
+		cout << player.getJumpPower() << endl;
+		cout << player.getPlayerY() << endl;
+
 		player.setPlayerY(player.getPlayerY() - player.getJumpPower());
 		player.setJumpPower(player.getJumpPower() - player.getGravity());
 		player.setGravity(player.getGravity());
 	}
 
 
-	if (player.getPlayerY() >= player.getShadowY() - 110)
+	if (player.getPlayerY() >= player.getY() - 110)
 	{
 		if (!player.getDirection())
 		{
@@ -218,22 +222,22 @@ void jumpState::update(player & player)
 	}
 	if (KEYMANAGER->isStayKeyDown(VK_LEFT))
 	{
-		player.setShadowX(player.getShadowX() - 3);
+		player.setX(player.getX() - 3);
 		player.setPlayerX(player.getPlayerX() - 3);
 	}
 	if (KEYMANAGER->isStayKeyDown(VK_RIGHT))
 	{
-		player.setShadowX(player.getShadowX() + 3);
+		player.setX(player.getX() + 3);
 		player.setPlayerX(player.getPlayerX() + 3);
 	}
 	if (KEYMANAGER->isStayKeyDown(VK_UP))
 	{
-		player.setShadowY(player.getShadowY() - 3);
+		player.setY(player.getY() - 3);
 		player.setPlayerY(player.getPlayerY() - 3);
 	}
 	if (KEYMANAGER->isStayKeyDown(VK_DOWN))
 	{
-		player.setShadowY(player.getShadowY() + 3);
+		player.setY(player.getY() + 3);
 		player.setPlayerY(player.getPlayerY() + 3);
 	}
 

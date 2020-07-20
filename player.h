@@ -13,21 +13,22 @@ class jumpState;
 class player : public gameNode
 {
 private:
-	playerState* _state;	
-	image* _img;					//플레이어 이미지
-	RECT _rc;						//플레이어 그림자 이미지 
-	RECT _player;					//플레이어
+	playerState* _state;
+	image* _img;
+	RECT _rc;
+	RECT _player;
 
-	int _probeBottom;				//픽셀충돌할거
-	bool _isMove;					//움직일 수 있는
-	bool _isJumping;				//점프하는지
+	int _probeBottom;
+	bool _isMove;
+	bool _isJumping;
 
-	float _shadowX, _shadowY;		//그림자 중점
-	float _playerX, _playerY;		//플레이어 중점
+	float _x, _y;
+	float _frameX, _frameY;
+	float _playerX, _playerY;
 
-	bool _direction;				//left = 0, right = 1
+	bool _direction;		//left = 0, right = 1
 
-	float _jumpPower, _gravity;		//플레이어 점프파워, 중력
+	float _jumpPower, _gravity;
 
 
 
@@ -53,36 +54,27 @@ public:
 	{
 		this->_state = state;
 	}
-
-public:
-//=====================GET================================
-	float getShadowX() { return _shadowX; }
-	float getShadowY() { return _shadowY; }
+	float getX() { return _x; }
+	float getY() { return _y; }
+	void setX(float x) { _x = x; }
+	void setY(float y) { _y = y; }
+	void setPlayerX(float playerX) { _playerX = playerX; }
+	void setPlayerY(float playerY) { _playerY = playerY; }
 	float getPlayerX() { return _playerX; }
 	float getPlayerY() { return _playerY; }
+	void setAni(animation* ani, image* img) { _img = img;  _playerMotion = ani; _playerMotion->start(); }
+	bool getDirection() { return _direction; }
+	void setDirection(bool direction) { _direction = direction; }
+	bool getIsMove() { return _isMove; }
 	float getJumpPower() { return _jumpPower; }
 	float getGravity() { return _gravity; }
-	bool getDirection() { return _direction; }
-	bool getIsMove() { return _isMove; }
+	void setJumpPower(float jumpPower) { _jumpPower = jumpPower; }
+	void setGravity(float gravity) { _gravity = gravity; }
 	bool getIsJumping() { return _isJumping; }
-
-
-
+	void setIsJumping(bool jumping) { _isJumping = jumping; }
 	playerState* getIdleState() { return _idle; }
 	playerState* getMoveState() { return _move; }
 	playerState* getJumpState() { return _jump; }
-
-//=====================SET================================
-	void setShadowX(float x) { _shadowX = x; }
-	void setShadowY(float y) { _shadowY = y; }
-	void setPlayerX(float playerX) { _playerX = playerX; }
-	void setPlayerY(float playerY) { _playerY = playerY; }
-	void setAni(animation* ani, image* img) { _img = img;  _playerMotion = ani; _playerMotion->start(); }
-	void setDirection(bool direction) { _direction = direction; }
-	void setJumpPower(float jumpPower) { _jumpPower = jumpPower; }
-	void setGravity(float gravity) { _gravity = gravity; }
-	void setIsJumping(bool jumping) { _isJumping = jumping; }
-	void setIsMove(bool isMove) { _isMove = isMove; }
 };
 
 

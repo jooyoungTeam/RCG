@@ -17,10 +17,10 @@ HRESULT player::init()
 	_state = _idle;
 	_img = IMAGEMANAGER->findImage("PLAYER_IDLE");
 
-	_shadowX = WINSIZEX / 2;
-	_shadowY = WINSIZEY / 2 + 100;
-	_playerX = _shadowX;
-	_playerY = _shadowY - 110;
+	_x = WINSIZEX / 2;
+	_y = WINSIZEY / 2 + 100;
+	_playerX = _x;
+	_playerY = _y - 110;
 	int rightIdle[] = { 12,13,14,15,16,17,18,19,20,21,22,23 };
 	KEYANIMANAGER->addArrayFrameAnimation("P_RIGHT_IDLE", "PLAYER_IDLE", rightIdle, 12, 10, true);
 	int leftIdle[] = { 11,10,9,8,7,6,5,4,3,2,1,0 };
@@ -42,7 +42,7 @@ HRESULT player::init()
 	int leftLanding[] = { 5 };
 	KEYANIMANAGER->addArrayFrameAnimation("P_RIGHT_JUMP", "PLAYER_JUMP", leftLanding, 1, 3, true);
 	_jumpPower = _gravity = 0;
-	_rc = RectMakeCenter(_shadowX, _playerY, 80, 30);
+	_rc = RectMakeCenter(_x, _y, 80, 30);
 	_player = RectMakeCenter(_playerX, _playerY, _img->getFrameWidth(), _img->getFrameHeight());
 	_playerMotion = KEYANIMANAGER->findAnimation("P_RIGHT_IDLE");
 	_playerMotion->start();
@@ -63,7 +63,7 @@ void player::update()
 {
 	KEYANIMANAGER->update();
 	_probeBottom = _rc.bottom;
-	_playerX = _shadowX;
+	_playerX = _x;
 	//_playerY = _y - 110;
 
 	_state->update(*this);
@@ -92,22 +92,22 @@ void player::update()
 	}
 	if (!_isMove)
 	{
-		_shadowY += 3;
+		_y += 3;
 
 	}
 	if (!_isJumping)
 	{
-		_playerY = _shadowY - 110;
+		_playerY = _y - 110;
 	}
 
 
 
-	_rc = RectMakeCenter(_shadowX, _shadowY, 80, 30);
+	_rc = RectMakeCenter(_x, _y, 80, 30);
 	_player = RectMakeCenter(_playerX, _playerY, _img->getFrameWidth(), _img->getFrameHeight());
 
 
-	CAMERAMANAGER->setX(_shadowX);
-	CAMERAMANAGER->setY(_shadowY);
+	CAMERAMANAGER->setX(_x);
+	CAMERAMANAGER->setY(_y);
 	cout << _isJumping << endl;
 }
 
