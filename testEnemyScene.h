@@ -1,8 +1,11 @@
 #pragma once
 #include "gameNode.h"
+#include "enemy.h"
+
 class testEnemyScene : public gameNode
 {
 private:
+	enemy* _enemy;
 
 public:
 	testEnemyScene() {}
