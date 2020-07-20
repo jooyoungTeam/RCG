@@ -198,6 +198,12 @@
     <ClInclude Include="stageManager.h">
       <Filter>playGround\stage</Filter>
     </ClInclude>
+    <ClInclude Include="testEnemyScene.h">
+      <Filter>playGround\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="testPlayerScene.h">
+      <Filter>playGround\stage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -309,6 +315,12 @@
       <Filter>playGround\object</Filter>
     </ClCompile>
     <ClCompile Include="stageManager.cpp">
+      <Filter>playGround\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="testEnemyScene.cpp">
+      <Filter>playGround\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="testPlayerScene.cpp">
       <Filter>playGround\stage</Filter>
     </ClCompile>
   </ItemGroup>
