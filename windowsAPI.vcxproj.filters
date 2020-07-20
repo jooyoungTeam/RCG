@@ -323,6 +323,9 @@
     <ClCompile Include="testPlayerScene.cpp">
       <Filter>playGround\stage</Filter>
     </ClCompile>
+    <ClCompile Include="playerStats.cpp">
+      <Filter>playGround\player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="windowsAPI.rc">
