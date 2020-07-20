@@ -207,6 +207,9 @@
     <ClInclude Include="testPlayerScene.h">
       <Filter>playGround\stage</Filter>
     </ClInclude>
+    <ClInclude Include="enemyState.h">
+      <Filter>playGround\enemy</Filter>
+    </ClInclude>
     <ClInclude Include="eventManager.h">
       <Filter>2DGameFramework\eventManager</Filter>
     </ClInclude>
@@ -334,12 +337,6 @@
     </ClCompile>
     <ClCompile Include="playerStats.cpp">
       <Filter>playGround\player</Filter>
-    </ClCompile>
-    <ClCompile Include="eventManager.cpp">
-      <Filter>2DGameFramework\eventManager</Filter>
-    </ClCompile>
-    <ClCompile Include="iEvent.cpp">
-      <Filter>2DGameFramework\eventManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
