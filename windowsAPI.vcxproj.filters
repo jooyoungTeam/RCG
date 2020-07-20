@@ -70,6 +70,9 @@
     <Filter Include="playGround\stage">
       <UniqueIdentifier>{8d883cd8-de17-4c2c-b17c-ae8617251245}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2DGameFramework\eventManager">
+      <UniqueIdentifier>{2f5634d6-1326-486b-9666-806482ae17fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -205,7 +208,10 @@
       <Filter>playGround\stage</Filter>
     </ClInclude>
     <ClInclude Include="eventManager.h">
-      <Filter>2DGameFramework\Manager</Filter>
+      <Filter>2DGameFramework\eventManager</Filter>
+    </ClInclude>
+    <ClInclude Include="iEvent.h">
+      <Filter>2DGameFramework\eventManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -330,7 +336,10 @@
       <Filter>playGround\player</Filter>
     </ClCompile>
     <ClCompile Include="eventManager.cpp">
-      <Filter>2DGameFramework\Manager</Filter>
+      <Filter>2DGameFramework\eventManager</Filter>
+    </ClCompile>
+    <ClCompile Include="iEvent.cpp">
+      <Filter>2DGameFramework\eventManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

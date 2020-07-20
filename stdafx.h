@@ -28,6 +28,7 @@ using namespace std;
 #include "txtData.h"
 #include "iniDataManager.h"
 #include "cameraManager.h"
+#include "eventManager.h"
 
 using namespace TTYONE_UTIL;
 
@@ -51,9 +52,11 @@ using namespace TTYONE_UTIL;
 #define SOUNDMANAGER  soundManager::getSingleton()
 #define SCENEMANAGER  sceneManager::getSingleton()
 #define KEYANIMANAGER keyAniManager::getSingleton()
+#define CAMERAMANAGER cameraManager::getSingleton()
+#define EVENTMANAGER  eventManager::getSingleton()
 #define TXTDATA       txtData::getSingleton()
 #define INIDATA       iniDataManager::getSingleton()
-#define CAMERAMANAGER cameraManager::getSingleton()
+
 
 #define SAFE_DELETE(p)		 {if(p) {delete(p); (p) = NULL;}}
 #define SAFE_RELEASE(p)		 {if(p) {(p)->release(); (p) = NULL;}}
